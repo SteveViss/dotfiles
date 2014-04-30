@@ -1,1 +1,1 @@
-../../../.dotfiles/vim/vimrc.symlink
+/home/steve/.dotfiles/vim/vimrc.symlink
