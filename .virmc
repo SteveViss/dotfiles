@@ -1,0 +1,63 @@
+" enable syntax highlighting
+syntax on
+
+" use spaces instead of tabs
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
+" always show ^M in DOS files
+set fileformats=unix
+
+" my terminal is white on black
+set background=dark
+highlight Comment ctermbg=blue
+highlight Comment ctermfg=white
+
+" always show line and col number and the current command, set title
+set ruler
+set showcmd
+set title titlestring=vim\ %f
+
+" caseinsensitive incremental search
+set ignorecase
+set incsearch
+
+" Show matching brackets
+set showmatch
+
+" disable any autoindenting which could mess with your mouse pastes (and your head)
+" (not useing 'set paste' here to keep fancy stuff like tab completion working)
+set nocindent
+set nosmartindent
+set noautoindent
+set indentexpr=
+filetype indent on
+
+" Enable 256 colors
+set t_Co=256
+
+
+" Maps Alt-[h,j,k,l] to resizing a window split
+map <silent> <A-h> <C-w><
+map <silent> <A-j> <C-W>-
+map <silent> <A-k> <C-W>+
+map <silent> <A-l> <C-w>>
+" Maps Alt-[s.v] to horizontal and vertical split respectively
+map <silent> <A-s> :split<CR>
+map <silent> <A-v> :vsplit<CR>
+" Maps Alt-[n,p] for moving next and previous window respectively
+map <silent> <A-n> <C-w><C-w>
+map <silent> <A-p> <C-w><S-w>
+
+"Add plugins via pathogen
+execute pathogen#infect()
+
+" map Ctrl+D to nerdtree
+map <C-d> :NERDTreeToggle<CR>
+
+" map Ctrl+P to invoke CtrlP file finder (http://kien.github.com/ctrlp.vim/)
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
